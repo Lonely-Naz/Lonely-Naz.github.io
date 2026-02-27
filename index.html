@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周冠成 & 何道坤 一周年</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+
+    <section class="hero">
+        <div class="container">
+            <h1>不是电影的一瞬间<br>是实打实的365天</h1>
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&h=500&fit=crop" alt="我们的合影" class="hero-photo">
+            <p class="hero-days" id="love-days"></p>
+            <p class="hero-slogan">一周年快乐，宝宝</p>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <div class="container">
+            <h2>我们的时光轴 <i class="fas fa-heart" style="color: var(--color-5);"></i></h2>
+            <div class="timeline-slider">
+                <div class="timeline-card">
+                    <i class="fas fa-hand-sparkles timeline-icon"></i>
+                    <p class="timeline-date">2025年2月7日</p>
+                    <h3 class="timeline-title">第一次聊天</h3>
+                    <p class="timeline-desc">我们，在微信上留下了第一个聊天记录</p>
+                </div>
+                <div class="timeline-card">
+                    <i class="fas fa-heart timeline-icon"></i>
+                    <p class="timeline-date">2025年2月28日</p>
+                    <h3 class="timeline-title">第一次见面</h3>
+                    <p class="timeline-desc">在平潭，我们决定在一起，你说"我也喜欢你"</p>
+                </div>
+                <div class="timeline-card">
+                    <i class="fas fa-plane timeline-icon"></i>
+                    <p class="timeline-date">2025年5月1日</p>
+                    <h3 class="timeline-title">第一次见你朋友</h3>
+                    <p class="timeline-desc">第一次去长沙，你把我介绍给了你的好闺蜜们</p>
+                </div>
+                <div class="timeline-card">
+                    <i class="fas fa-utensils timeline-icon"></i>
+                    <p class="timeline-date">2025年7月30日</p>
+                    <h3 class="timeline-title">第一次同居</h3>
+                    <p class="timeline-desc">两人住在一起，我们的幸福生活开始了</p>
+                </div>
+                <div class="timeline-card">
+                    <i class="fas fa-gift timeline-icon"></i>
+                    <p class="timeline-date">2025年8月2日</p>
+                    <h3 class="timeline-title">第一场电影</h3>
+                    <p class="timeline-desc">还记得我们看的第一场电影吗</p>
+                </div>
+                <div class="timeline-card">
+                    <i class="fas fa-gift timeline-icon"></i>
+                    <p class="timeline-date">2026年1月1日</p>
+                    <h3 class="timeline-title">第一次跨年</h3>
+                    <p class="timeline-desc">跨年夜那天，我们一起看了烟花</p>
+                </div>
+            </div>
+            <p class="timeline-ongoing">未完待续……</p>
+        </div>
+    </section>
+
+    <section class="photo-wall">
+        <div class="container">
+            <h2>我们的照片墙 <i class="fas fa-images" style="color: var(--color-5);"></i></h2>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <div class="carousel-slide">
+                        <img src="/image/IMG_20250502_120407.jpg" alt="我们的合影1">
+                        <div class="carousel-caption">
+                            <h3>初次约会</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/image/IMG_20250620_134206.jpg" alt="我们的合影2">
+                        <div class="carousel-caption">
+                            <h3>第一次旅行</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/image/IMG_20260215_190733.jpg" alt="我们的合影3">
+                        <div class="carousel-caption">
+                            <h3>温馨日常</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/image/mmexport1767324049601.jpg" alt="我们的合影4">
+                        <div class="carousel-caption">
+                            <h3>节日惊喜</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/image/IMG_20250502_120407.jpg" alt="我们的合影5">
+                        <div class="carousel-caption">
+                            <h3>未来可期</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-arrow prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-arrow next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+    </section>
+
+    <section class="love-list">
+        <div class="container">
+            <h2>为你写的101件小事 <i class="fas fa-pen-fancy" style="color: var(--color-5);"></i></h2>
+            <div class="love-grid">
+                <div class="love-card">
+                    <i class="fas fa-heart love-card-icon"></i>
+                    <p>喜欢你照顾我的样子</p>
+                </div>
+                <div class="love-card">
+                    <i class="fas fa-kiss-wink-heart love-card-icon"></i>
+                    <p>每天说一次我爱你</p>
+                </div>
+                <div class="love-card">
+                    <i class="fas fa-music love-card-icon"></i>
+                    <p>和你一起听同一首歌</p>
+                </div>
+                <div class="love-card">
+                    <i class="fas fa-umbrella love-card-icon"></i>
+                    <p>下雨天为你撑伞</p>
+                </div>
+                <div class="love-card">
+                    <i class="fas fa-moon love-card-icon"></i>
+                    <p>晚安吻是最甜蜜的仪式</p>
+                </div>
+                <div class="love-card">
+                    <i class="fas fa-star love-card-icon"></i>
+                    <p>你眼里的星星比任何风景都美</p>
+                </div>
+                <div class="love-card">
+                    <i class="fas fa-camera love-card-icon"></i>
+                    <p>偷偷拍下你专注的样子</p>
+                </div>
+                <div class="love-card">
+                    <i class="fas fa-hand-holding-heart love-card-icon"></i>
+                    <p>无论何时都想牵着你的手</p>
+                </div>
+                <p class="love-more">还有更多...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="future-map">
+        <div class="container">
+            <h2>我们的未来计划 <i class="fas fa-compass" style="color: var(--color-5);"></i></h2>
+            <div class="future-grid">
+                <div class="future-item" onclick="toggleFuture(this)">
+                    <i class="fas fa-home future-icon"></i>
+                    <div class="future-checkbox">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p class="future-text">一起过同居生活</p>
+                </div>
+                <div class="future-item" onclick="toggleFuture(this)">
+                    <i class="fas fa-plane future-icon"></i>
+                    <div class="future-checkbox">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p class="future-text">一起去世界各地旅行</p>
+                </div>
+                <div class="future-item" onclick="toggleFuture(this)">
+                    <i class="fas fa-paw future-icon"></i>
+                    <div class="future-checkbox">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p class="future-text">一起养猫猫狗狗</p>
+                </div>
+                <div class="future-item" onclick="toggleFuture(this)">
+                    <i class="fas fa-birthday-cake future-icon"></i>
+                    <div class="future-checkbox">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p class="future-text">一起做一个蛋糕</p>
+                </div>
+                <div class="future-item" onclick="toggleFuture(this)">
+                    <i class="fas fa-camera future-icon"></i>
+                    <div class="future-checkbox">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p class="future-text">一起拍好多帅照</p>
+                </div>
+                <div class="future-item" onclick="toggleFuture(this)">
+                    <i class="fas fa-utensils future-icon"></i>
+                    <div class="future-checkbox">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p class="future-text">一起做一顿大餐</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <h2>致未来的我们 <i class="fas fa-infinity" style="color: var(--color-1);"></i></h2>
+            <p class="footer-message">
+                无论未来有多少风雨，我都想牵着你的手一起走过。<br>
+                愿我们的爱情像这温柔的紫色天空一样，永恒而美好。<br>
+                5201314，永远爱你，我的宝贝。
+            </p>
+            <button class="footer-button" onclick="showHeart()">
+                <i class="fas fa-heart"></i> 发送一个拥抱
+            </button>
+            <p class="footer-countdown">
+                距离下一个纪念日还有 <span id="countdown">0</span> 天
+            </p>
+            <p class="footer-copyright">
+                © 2026 周冠成 & 何道坤 | Made with <i class="fas fa-heart"></i> by 冠成
+            </p>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
